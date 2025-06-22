@@ -3,6 +3,7 @@ import Html from "../icons/Tecnologias/Lenguajes/Html.astro";
 import Php from "../icons/Tecnologias/Lenguajes/Php.astro";
 import Css from "../icons/Tecnologias/Lenguajes/Css.astro";
 import Js from "../icons/Tecnologias/Lenguajes/Js.astro";
+import Mysql from '../icons/Tecnologias/Bases_de_datos/Mysql.astro';
 import React from "../icons/Tecnologias/Frameworks_Librerias/React.astro";
 import Social_icons from "./Social_icons.astro";
 import Github from "../icons/Social/Github.astro";
@@ -11,7 +12,7 @@ import Link from "../icons/Social/Link.astro";
 const TAGS = {
   Php: {
     name: "Php",
-    class: "bg-[#963419] text-white",
+    class: "bg-[#8993be] text-white",
     icon: Php,
   },
   Html: {
@@ -29,29 +30,29 @@ const TAGS = {
     class: "bg-[#a39535] text-white",
     icon: Js,
   },
-  React: {
-    name: "React",
-    class: "bg-[#1c7777] text-white",
-    icon: React,
+  Mysql: {
+    name: "Mysql",
+    class: "bg-[#F29111] text-white",
+    icon: Mysql,
   },
 };
 
 const PROJECTS = [
   {
-    title: "Aplicación web",
+    title: "Apifinc",
     description: "Proyecto final del CS de Desarrollo de Aplicaciones Web. Se trata de una aplicación web creada para la administración de fincas. Desarrollado con XAMPP",
     link: "#",
     github: "https://github.com/ismaelmg-dev",
-    image: "/projects/proyecto1.webp",
-    tags: [TAGS.Php, TAGS.Html, TAGS.Css, TAGS.Js],
+    image: "/projects/apifinc.webp",
+    tags: [TAGS.Php, TAGS.Html, TAGS.Css, TAGS.Js, TAGS.Mysql],
   },
   {
-    title: "Gestor de tareas",
+    title: "Taskly",
     description: "Aplicación para gestión de tareas desarrollada en equipo para la empresa Zaitec, concretamente la parte de backend. Desarrollada en XAMPP.",
     link: "#",
     github: "https://github.com/ismaelmg-dev",
-    image: "/projects/proyecto2.webp",
-    tags: [TAGS.Php, TAGS.Html, TAGS.Css, TAGS.Js],
+    image: "/projects/taskly.webp",
+    tags: [TAGS.Php, TAGS.Html, TAGS.Css, TAGS.Mysql],
   },
 ];
 ---
@@ -84,15 +85,15 @@ const PROJECTS = [
 
         <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
-            <Social_icons href={github}>
+            <Social_icons href={"https://github.com/ismaelmg-dev/proyectos"}>
               <Github class="size-6" />
-              Code
+              Otros proyectos
             </Social_icons>
           )}
           {link && (
             <Social_icons href={link}>
               <Link class="size-4" />
-              Preview
+              Ver proyecto
             </Social_icons>
           )}
         </footer>
